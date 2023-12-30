@@ -17,6 +17,10 @@ namespace Watchlist.Controllers
         {
 
             //pss: Bonjour#123
+            //une fois que l'utilisateur se connecte on le redirige vers sa liste de films 
+            if(User.Identity.IsAuthenticated){
+                return RedirectToAction("Index", "ListeFilms");
+            }
             return View();
         }
 

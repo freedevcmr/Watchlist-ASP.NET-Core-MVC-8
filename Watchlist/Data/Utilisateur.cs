@@ -1,9 +1,9 @@
 ﻿
-using Microsoft.AspNetCore.Identity;
+
 
 namespace Watchlist.Data
 {
-    public class Utilisateur : IdentityUser
+    public class Utilisateur : Microsoft.AspNetCore.Identity.IdentityUser
     {
 
 
@@ -11,7 +11,7 @@ namespace Watchlist.Data
         public virtual ICollection<FilmUtilisateur> ListeFilms { get; set; }
 
         /// mise en place du construteur 
-        public Utilisateur() :base() 
+        public Utilisateur() :base()
         {
             this.ListeFilms =new HashSet<FilmUtilisateur>();
         }
