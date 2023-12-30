@@ -53,14 +53,21 @@ namespace Watchlist.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titre,Annee")] Film film)
+       // public async Task<IActionResult> Create([Bind("Id,Titre,Annee")] Film film)
+         public async Task<IActionResult> Create([Bind("Id,Titre,Annee")] Film film)
         {
+
+            
+
             if (ModelState.IsValid)
             {
                 _context.Add(film);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            
+
             return View(film);
         }
 

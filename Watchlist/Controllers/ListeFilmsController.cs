@@ -45,6 +45,18 @@ namespace Watchlist.Controllers
 
 
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public string Create()
+        {
+
+            return "je suis le controller listefilmsController";
+
+           
+            
+        }
+
+
 
     }
 }

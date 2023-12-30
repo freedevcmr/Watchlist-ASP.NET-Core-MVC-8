@@ -15,7 +15,7 @@ namespace Watchlist.Data
         public virtual Utilisateur User { get; set; }
         public virtual Film Film { get; set; }
 
-        public DbSet<FilmUtilisateur> FilmsUtilisateur { get; set; }
+       // public DbSet<FilmUtilisateur> FilmsUtilisateur { get; set; }
 
     }
 }
