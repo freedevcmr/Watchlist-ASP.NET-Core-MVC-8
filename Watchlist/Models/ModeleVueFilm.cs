@@ -12,5 +12,7 @@ namespace Watchlist.Models
         public bool Vu {  get; set; }
         public int? Note { get; set; }
 
+
+
     }
 }
